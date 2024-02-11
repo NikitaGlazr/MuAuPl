@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MuAuPl</string>
+    <string name="menu_sorting">Сортировка</string>
+    <string name="menu_search">Поиск</string>
 </resources>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/menu_sorting"
+        app:showAsAction="never">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/sort_by_name"
+                    android:title="По названию"/>
+                <item
+                    android:id="@+id/sort_by_date"
+                    android:title="По дате"/>
+                <!-- Добавьте другие варианты сортировки по мере необходимости -->
+            </group>
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/action_search"
+        android:icon="@android:drawable/ic_menu_search"
+        android:orderInCategory="200"
+        android:title="@string/menu_search"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/action_search_input"
+        app:actionLayout="@layout/search_view_layout"
+        app:showAsAction="always"
+        android:title="Search"/>
+</menu>

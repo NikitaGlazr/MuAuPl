@@ -75,7 +75,7 @@ public class MainActivityMusicWindow extends AppCompatActivity {
     }
     private void performSearch(String query) {
         // Обработка поискового запроса
-        // Здесь вы можете добавить логику для поиска и отображения результатов
+        // Здесь можно добавить логику для поиска и отображения результатов
         Toast.makeText(this, "Поиск: " + query, Toast.LENGTH_SHORT).show();
     }
 }

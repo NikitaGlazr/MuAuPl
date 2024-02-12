@@ -1,2 +1,19 @@
-package com.example.muaupl;public class Track {
+package com.example.muaupl;
+
+public class Track{
+    private String title;
+    private String time;
+
+        public Track(String title, String time) {
+            this.title = title;
+            this.time = time;
+        }
+
+        public String getTitle() {
+            return title;
+        }
+
+        public String getTime() {
+            return time;
+        }
 }

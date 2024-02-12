@@ -5,5 +5,5 @@
     <string name="tracks">Треки</string>
     <string name="playlists">Плейлисты</string>
     <string name="lose_everything">Проиграть все</string>
-
+    <string name="setting">Настройки</string>
 </resources>

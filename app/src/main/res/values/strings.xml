@@ -2,4 +2,8 @@
     <string name="app_name">MuAuPl</string>
     <string name="menu_sorting">Сортировка</string>
     <string name="menu_search">Поиск</string>
+    <string name="tracks">Треки</string>
+    <string name="playlists">Плейлисты</string>
+    <string name="lose_everything">Проиграть все</string>
+
 </resources>

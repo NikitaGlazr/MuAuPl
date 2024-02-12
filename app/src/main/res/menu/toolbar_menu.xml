@@ -14,6 +14,9 @@
                 <item
                     android:id="@+id/sort_by_date"
                     android:title="По дате"/>
+                <item
+                    android:id="@+id/sort_by_type"
+                    android:title="По расширению"/>
                 <!-- Добавьте другие варианты сортировки по мере необходимости -->
             </group>
         </menu>
@@ -21,7 +24,7 @@
 
     <item
         android:id="@+id/action_search"
-        android:icon="@android:drawable/ic_menu_search"
+        android:icon="@drawable/iconsearch"
         android:orderInCategory="200"
         android:title="@string/menu_search"
         app:showAsAction="ifRoom"/>
@@ -31,4 +34,10 @@
         app:actionLayout="@layout/search_view_layout"
         app:showAsAction="always"
         android:title="Search"/>
+
+    <item
+        android:id="@+id/lose_everything"
+        android:orderInCategory="100"
+        android:title="@string/lose_everything"
+        app:showAsAction="never"/>
 </menu>

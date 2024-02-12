@@ -16,4 +16,6 @@
     <color name="dark_grey">#41454a</color>
     <color name="heart_fill">#4a80f0</color>
     <color name="ripple_color">#737988</color>
+
+    <color name="blue_grey">#516081</color>
 </resources>

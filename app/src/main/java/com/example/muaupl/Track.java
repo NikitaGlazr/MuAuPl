@@ -3,6 +3,8 @@ package com.example.muaupl;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Track implements Parcelable {
@@ -71,5 +73,17 @@ public class Track implements Parcelable {
         dest.writeString(title);
         dest.writeString(time);
         dest.writeString(trackUri);
+    }
+
+    // Добавляем метод для парсинга времени в длительность в миллисекундах
+    public long getDuration() {
+        SimpleDateFormat sdf = new SimpleDateFormat("mm:ss");
+        try {
+            Date timeDate = sdf.parse(time);
+            return timeDate.getTime();
+        } catch (ParseException e) {
+            e.printStackTrace();
+            return 0;
+        }
     }
 }

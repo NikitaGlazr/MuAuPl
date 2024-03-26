@@ -27,7 +27,6 @@ import com.google.android.material.tabs.TabLayout;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.Date;
 
 public class MainActivityMusicWindow extends AppCompatActivity{
     private Toolbar mToolbar;
@@ -202,9 +201,9 @@ public class MainActivityMusicWindow extends AppCompatActivity{
             // Сортировка по имени
             sortTracksByName();
             return true;
-        } else if (id == R.id.sort_by_date) {
-            // Сортировка по дате
-            sortTracksByDate();
+        } else if (id == R.id.sort_by_file_time) {
+            // Сортировка по времени файла
+            sortTracksByFileTime();
             return true;
         } else if (id == R.id.sort_by_type) {
             // Сортировка по расширению
@@ -240,15 +239,14 @@ public class MainActivityMusicWindow extends AppCompatActivity{
         }
     }
 
-    private void sortTracksByDate() {
+    private void sortTracksByFileTime() {
         TracksFragment tracksFragment = (TracksFragment) getSupportFragmentManager().findFragmentByTag("android:switcher:" + R.id.viewPager + ":" + viewPager.getCurrentItem());
         if (tracksFragment != null) {
             Collections.sort(tracksFragment.tracksList, new Comparator<Track>() {
                 @Override
                 public int compare(Track track1, Track track2) {
-                    Date date1 = track1.getDate() != null ? track1.getDate() : new Date(Long.MAX_VALUE);
-                    Date date2 = track2.getDate() != null ? track2.getDate() : new Date(Long.MAX_VALUE);
-                    return Long.compare(date2.getTime(), date1.getTime());
+                    // Сравниваем по длине воспроизведения песни
+                    return Long.compare(track2.getDuration(), track1.getDuration());
                 }
             });
             tracksFragment.tracksAdapter.notifyDataSetChanged();

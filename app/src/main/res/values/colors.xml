@@ -2,6 +2,8 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="Red">#FF0000</color>
+
 
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
@@ -11,11 +13,17 @@
 
 
     <color name="dark_blue">#191b20</color>
+    <color name="grey_blue">#424755</color>
     <color name="blue">#4a80f0</color>
     <color name="light_black">#101116</color>
-    <color name="dark_grey">#41454a</color>
+    <color name="grey">#41454a</color>
+    <color name="dark_grey">#212121</color>
+
+    <color name="white_grey">#bfbfbf</color>
     <color name="heart_fill">#4a80f0</color>
     <color name="ripple_color">#737988</color>
+
+
 
     <color name="blue_grey">#516081</color>
 </resources>

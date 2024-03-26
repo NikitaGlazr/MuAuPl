@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:theme="@style/AppTheme">
     <item
         android:id="@+id/action_settings"
         android:orderInCategory="100"
         android:title="@string/menu_sorting"
-        app:showAsAction="never">
+        app:showAsAction="never"
+      >
         <menu>
             <group android:checkableBehavior="single">
                 <item
@@ -17,6 +19,7 @@
                 <item
                     android:id="@+id/sort_by_type"
                     android:title="По расширению"/>
+
                 <!-- Добавьте другие варианты сортировки по мере необходимости -->
             </group>
         </menu>
@@ -27,7 +30,8 @@
         android:icon="@drawable/iconsearch"
         android:orderInCategory="200"
         android:title="@string/menu_search"
-        app:showAsAction="ifRoom"/>
+        app:showAsAction="ifRoom"
+        />
 
     <item
         android:id="@+id/action_search_input"
@@ -36,14 +40,14 @@
         android:title="Search"/>
 
     <item
-        android:id="@+id/lose_everything"
-        android:orderInCategory="100"
-        android:title="@string/lose_everything"
-        app:showAsAction="never"/>
+        android:id="@+id/action_clear_search"
+        android:orderInCategory="200"
+        android:title="Сбросить поиск"
+        app:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/setting"
-        android:orderInCategory="100"
+        android:orderInCategory="400"
         android:title="@string/setting"
         app:showAsAction="never"/>
 </menu>

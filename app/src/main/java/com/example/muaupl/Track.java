@@ -1,19 +1,75 @@
 package com.example.muaupl;
 
-public class Track{
+import android.os.Parcel;
+import android.os.Parcelable;
+
+import java.util.Date;
+
+public class Track implements Parcelable {
     private String title;
     private String time;
+    public String trackUri;   private Date date; // Добавляем поле для даты
+    private String type; // Добавляем поле для типа трека
 
-        public Track(String title, String time) {
-            this.title = title;
-            this.time = time;
+    public Track(String title, String time, String trackUri) {
+        this.title = title;
+        this.time = time;
+        this.trackUri = trackUri;
+    }
+
+    // Добавляем конструктор с пятью параметрами
+    public Track(String title, String time, String trackUri, Date date, String type) {
+        this.title = title;
+        this.time = time;
+        this.trackUri = trackUri;
+        this.date = date;
+        this.type = type;
+    }
+
+    // Добавляем методы для получения даты и типа трека
+    public Date getDate() {
+        return date;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getTrackUri() {
+        return trackUri;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    protected Track(Parcel in) {
+        title = in.readString();
+        time = in.readString();
+        trackUri = in.readString();
+    }
+
+    public static final Creator<Track> CREATOR = new Creator<Track>() {
+        @Override
+        public Track createFromParcel(Parcel in) {
+            return new Track(in);
         }
 
-        public String getTitle() {
-            return title;
+        @Override
+        public Track[] newArray(int size) {
+            return new Track[size];
         }
+    };
 
-        public String getTime() {
-            return time;
-        }
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(title);
+        dest.writeString(time);
+        dest.writeString(trackUri);
+    }
 }

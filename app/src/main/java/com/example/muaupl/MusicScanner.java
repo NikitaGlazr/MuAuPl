@@ -48,7 +48,6 @@ public class MusicScanner {
             String duration = retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_DURATION);
             long durationInMillis = Long.parseLong(duration);
 
-            // Convert milliseconds to MM:SS format
             return String.format(Locale.getDefault(), "%02d:%02d",
                     TimeUnit.MILLISECONDS.toMinutes(durationInMillis),
                     TimeUnit.MILLISECONDS.toSeconds(durationInMillis) -

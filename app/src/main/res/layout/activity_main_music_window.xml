@@ -77,7 +77,7 @@
             android:layout_height="32dp"
             android:contentDescription="Previous Track"
             android:padding="1dp"
-            android:src="@drawable/arg_prev"
+            android:src="@drawable/arg_prev_white"
             tools:layout_editor_absoluteX="69dp"
             tools:layout_editor_absoluteY="677dp" />
 
@@ -87,7 +87,7 @@
             android:layout_height="60dp"
             android:contentDescription="Play/Pause Track"
             android:padding="20dp"
-            android:src="@drawable/arg_pause"
+            android:src="@drawable/arg_pause_white"
             tools:layout_editor_absoluteX="109dp"
             tools:layout_editor_absoluteY="663dp" />
 
@@ -97,7 +97,7 @@
             android:layout_height="32dp"
             android:contentDescription="Next Track"
             android:padding="1dp"
-            android:src="@drawable/arg_next"
+            android:src="@drawable/arg_next_white"
             tools:layout_editor_absoluteX="173dp"
             tools:layout_editor_absoluteY="677dp" />
 

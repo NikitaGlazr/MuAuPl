@@ -12,7 +12,7 @@ public class MediaPlayerManager {
     private ArrayList<Track> tracksList;
     public MediaPlayerManager() {
         this.mediaPlayer = new MediaPlayer();
-        // Дополнительная настройка вашего медиаплеера
+        // Дополнительная настройка медиаплеера
     }
     public void setTracksList(ArrayList<Track> tracksList) {
         this.tracksList = tracksList;

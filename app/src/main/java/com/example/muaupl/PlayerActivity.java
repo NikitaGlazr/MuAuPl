@@ -72,7 +72,7 @@ public class PlayerActivity extends AppCompatActivity {
             }
         });
 
-
+        //для обработки свайпов на экране.
         gestureDetector = new GestureDetector(this, new GestureDetector.SimpleOnGestureListener() {
             private static final int SWIPE_THRESHOLD = 100;
             private static final int SWIPE_VELOCITY_THRESHOLD = 100;
@@ -174,7 +174,7 @@ public class PlayerActivity extends AppCompatActivity {
                 if (trackUri != null) {
                     Log.d("PlayerActivity", "trackUri value: " + trackUri);
 
-                    // Добавьте этот код для проверки выполнения после получения trackUri
+                    //код для проверки выполнения после получения trackUri
                     Log.d("PlayerActivity", "Полученный trackUri: " + trackUri);
 
                     try {
@@ -226,7 +226,7 @@ public class PlayerActivity extends AppCompatActivity {
             }
         }).start();
 
-        // Добавьте слушатель изменения позиции SeekBar
+        //слушатель изменения позиции SeekBar
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
@@ -259,6 +259,7 @@ public class PlayerActivity extends AppCompatActivity {
             }
         });
     }
+    //Свайп
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         return gestureDetector.onTouchEvent(event) || super.onTouchEvent(event);
@@ -286,8 +287,7 @@ public class PlayerActivity extends AppCompatActivity {
 
                     tvSongTitle.setText(track.getTitle());
                     tvTotalTime.setText(track.getTime());
-
-                    // Добавьте вызов showNotification здесь после начала воспроизведения трека
+                    
                    // notificationHelper.showNotification(this, track.getTitle(), true);
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -341,7 +341,7 @@ public class PlayerActivity extends AppCompatActivity {
     }
 
     private void togglePlayPause() {
-        // Реализуйте переключение между воспроизведением и паузой
+        //переключение между воспроизведением и паузой
         if (mediaPlayer != null) {
             if (mediaPlayer.isPlaying()) {
                 mediaPlayer.pause();

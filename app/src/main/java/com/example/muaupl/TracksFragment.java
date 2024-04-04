@@ -37,7 +37,7 @@ public class TracksFragment extends Fragment {
         }
 
         listViewTracks = view.findViewById(R.id.listViewTracks);
-        retrieveTracks(tabType == 0); // Передаем параметр в зависимости от tabType
+        retrieveTracks(tabType == 0); //параметр // в зависимости от tabType
 
         if (tracksList.isEmpty()) {
             Log.d("MyApp", "Массив треков пуст");
@@ -76,7 +76,6 @@ public class TracksFragment extends Fragment {
                     musicPlayer.stopPlayback();
 
                     ArrayList<Parcelable> parcelableTracksList = new ArrayList<>(tracksList);
-                    // Лог для проверки передачи массива треков
                         Log.d("MyApp", "Проверка передачи массива треков: " + parcelableTracksList.toString());
 
                     intent.putParcelableArrayListExtra("trackList", parcelableTracksList);
@@ -91,7 +90,6 @@ public class TracksFragment extends Fragment {
 
         return view;
     }
-
 
 
     private String getTrackUri(String trackTitle) {
@@ -114,11 +112,8 @@ public class TracksFragment extends Fragment {
         } else {
             Log.e("MyApp", "Cursor is null or empty");
         }
-
-
         return null;
     }
-
 
 
     private void retrieveTracks(boolean isMusicFragment) {
@@ -173,7 +168,7 @@ public class TracksFragment extends Fragment {
     }
     public void showAllTracks() {
         tracksList.clear();
-        retrieveTracks(tabType == 0); // Передаем параметр в зависимости от tabType
+        retrieveTracks(tabType == 0); // Передаnm параметр в зависимости от tabType
 
         if (tracksAdapter != null) {
             ((TrackAdapter) tracksAdapter).resetFilter();

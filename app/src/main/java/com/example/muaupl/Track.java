@@ -75,7 +75,7 @@ public class Track implements Parcelable {
         dest.writeString(trackUri);
     }
 
-    // Добавляем метод для парсинга времени в длительность в миллисекундах
+    //метод для парсинга времени в длительность в миллисекундах
     public long getDuration() {
         SimpleDateFormat sdf = new SimpleDateFormat("mm:ss");
         try {

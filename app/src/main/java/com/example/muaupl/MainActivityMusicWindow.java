@@ -218,7 +218,7 @@ public class MainActivityMusicWindow extends AppCompatActivity{
         if (tracksFragment != null) {
             if (query.isEmpty()) {
                 // Сбросить поиск
-                tracksFragment.showAllTracks(); // Добавьте метод для отображения всех песен
+                tracksFragment.showAllTracks();
             } else {
                 // Выполнить поиск
                 tracksFragment.filterTracks(query);
@@ -279,7 +279,6 @@ public class MainActivityMusicWindow extends AppCompatActivity{
 
     private void playNextTrack() {
         MusicPlayer.getInstance().playNextTrack();
-
     }
 
     private void playPreviousTrack() {
@@ -290,10 +289,10 @@ public class MainActivityMusicWindow extends AppCompatActivity{
         MusicPlayer musicPlayer = MusicPlayer.getInstance();
         if (musicPlayer.isPlaying()) {
             musicPlayer.togglePlayPause();
-            playPauseImageView.setImageResource(R.drawable.arg_play);
+            playPauseImageView.setImageResource(R.drawable.arg_play_white);
         } else {
             musicPlayer.togglePlayPause();
-            playPauseImageView.setImageResource(R.drawable.arg_pause);
+            playPauseImageView.setImageResource(R.drawable.arg_pause_white);
         }
     }
 

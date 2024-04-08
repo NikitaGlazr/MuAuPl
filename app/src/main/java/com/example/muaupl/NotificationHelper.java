@@ -68,7 +68,6 @@ public class NotificationHelper {
         return PendingIntent.getService(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
     }
 
-
     public void cancelNotification() {
         // Отмена уведомления
         notificationManager.cancel(NOTIFICATION_ID);

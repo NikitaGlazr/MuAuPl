@@ -7,7 +7,6 @@
     tools:context=".MainActivityMusicWindow"
     tools:ignore="ExtraText">
 
-
     <!-- Toolbar с иконкой приложения -->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -17,7 +16,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
-
     </androidx.appcompat.widget.Toolbar>
 
     <!-- TabLayout для отображения вкладок -->
@@ -54,9 +52,7 @@
         app:layout_constraintBottom_toTopOf="@id/playerControlsMenu"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
-
     </FrameLayout>
-
 
     <!-- Маленькое меню для управления плеером -->
     <LinearLayout
@@ -100,9 +96,5 @@
             android:src="@drawable/arg_next_white"
             tools:layout_editor_absoluteX="173dp"
             tools:layout_editor_absoluteY="677dp" />
-
-
     </LinearLayout>
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

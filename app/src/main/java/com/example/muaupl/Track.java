@@ -10,8 +10,8 @@ import java.util.Date;
 public class Track implements Parcelable {
     private String title;
     private String time;
-    public String trackUri;   private Date date; // Добавляем поле для даты
-    private String type; // Добавляем поле для типа трека
+    public String trackUri;   private Date date; //поле для даты
+    private String type; //поле для типа трека
 
     public Track(String title, String time, String trackUri) {
         this.title = title;
@@ -19,7 +19,7 @@ public class Track implements Parcelable {
         this.trackUri = trackUri;
     }
 
-    // Добавляем конструктор с пятью параметрами
+    //конструктор с пятью параметрами
     public Track(String title, String time, String trackUri, Date date, String type) {
         this.title = title;
         this.time = time;
@@ -28,7 +28,7 @@ public class Track implements Parcelable {
         this.type = type;
     }
 
-    // Добавляем методы для получения даты и типа трека
+    //методы для получения даты и типа трека и т.д.
     public Date getDate() {
         return date;
     }

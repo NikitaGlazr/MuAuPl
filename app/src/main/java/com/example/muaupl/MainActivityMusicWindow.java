@@ -36,7 +36,7 @@ public class MainActivityMusicWindow extends AppCompatActivity{
     EditText editTextSearch;
     private ViewPager viewPager;
     public ArrayList<Track> tracksList = new ArrayList<>();
-    public ArrayAdapter<Track> tracksAdapter;private ImageView playPauseImageView; // Перенесенная переменная
+    public ArrayAdapter<Track> tracksAdapter;private ImageView playPauseImageView;
     private LinearLayout playerControlsMenu;
 
     @Override
@@ -51,7 +51,7 @@ public class MainActivityMusicWindow extends AppCompatActivity{
         viewPager = findViewById(R.id.viewPager);
 
         ImageView prevTrackImageView = findViewById(R.id.prevTrackImageView);
-        playPauseImageView = findViewById(R.id.playPauseImageView); // Перемещение сюда
+        playPauseImageView = findViewById(R.id.playPauseImageView);
         ImageView nextTrackImageView = findViewById(R.id.nextTrackImageView);
 
         prevTrackImageView.setOnClickListener(new View.OnClickListener() {
@@ -77,7 +77,6 @@ public class MainActivityMusicWindow extends AppCompatActivity{
                 playNextTrack();
             }
         });
-
     }
 
     @Override
@@ -119,7 +118,6 @@ public class MainActivityMusicWindow extends AppCompatActivity{
                 InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
                 imm.hideSoftInputFromWindow(editTextSearch.getWindowToken(), 0);
             }
-
             return true;
         });
 
@@ -253,7 +251,6 @@ public class MainActivityMusicWindow extends AppCompatActivity{
         }
     }
 
-
     private void sortTracksByType() {
         TracksFragment tracksFragment = (TracksFragment) getSupportFragmentManager().findFragmentByTag("android:switcher:" + R.id.viewPager + ":" + viewPager.getCurrentItem());
         if (tracksFragment != null) {
@@ -264,7 +261,6 @@ public class MainActivityMusicWindow extends AppCompatActivity{
                     String extension2 = getFileExtension(track2.getTitle());
                     return extension1.compareTo(extension2);
                 }
-
                 public String getFileExtension(String filename) {
                     int dotPos = filename.lastIndexOf(".");
                     if (dotPos == -1) {
@@ -295,5 +291,4 @@ public class MainActivityMusicWindow extends AppCompatActivity{
             playPauseImageView.setImageResource(R.drawable.arg_pause_white);
         }
     }
-
 }

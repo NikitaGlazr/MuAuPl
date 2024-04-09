@@ -19,7 +19,6 @@ public class MediaPlayerManager {
     }
     public void playNextTrack() {
         // Логика для проигрывания следующего трека
-
         currentTrackIndex++; // Увеличиваем индекс текущего трека
 
         if (tracksList != null && currentTrackIndex < tracksList.size()) {
@@ -27,10 +26,10 @@ public class MediaPlayerManager {
             if (nextTrack != null && nextTrack.getTrackUri() != null) {
                 playTrack(nextTrack);
             } else {
-                Log.e("MediaPlayerManager", "Invalid track or trackUri is null for the next track");
+                Log.e("MediaPlayerManager", "Неверный трек или trackUri для следующего трека имеет значение null.");
             }
         } else {
-            Log.d("MediaPlayerManager", "No more tracks to play");
+            Log.d("MediaPlayerManager", "Больше нет треков для воспроизведения");
             // Можно добавить логику для обработки ситуации, когда больше нет треков для воспроизведения
         }
     }
@@ -41,9 +40,9 @@ public class MediaPlayerManager {
             mediaPlayer.setDataSource(track.getTrackUri());
             mediaPlayer.prepare();
             mediaPlayer.start();
-            Log.d("MediaPlayerManager", "Playing track: " + track.getTitle());
+            Log.d("MediaPlayerManager", "Воспроизводимый трек: " + track.getTitle());
         } catch (Exception e) {
-            Log.e("MediaPlayerManager", "Error playing track: " + e.getMessage());
+            Log.e("MediaPlayerManager", "Ошибка воспроизведения трека: " + e.getMessage());
             e.printStackTrace();
         }
     }
@@ -57,10 +56,10 @@ public class MediaPlayerManager {
             if (previousTrack != null && previousTrack.getTrackUri() != null) {
                 playTrack(previousTrack);
             } else {
-                Log.e("MediaPlayerManager", "Invalid track or trackUri is null for the previous track");
+                Log.e("MediaPlayerManager", "Неверный трек или trackUri имеет значение null для предыдущего трека.");
             }
         } else {
-            Log.d("MediaPlayerManager", "No previous tracks to play");
+            Log.d("MediaPlayerManager", "Нет предыдущих треков для воспроизведения");
             // Можно добавить логику для обработки ситуации, когда больше нет предыдущих треков для воспроизведения
         }
     }

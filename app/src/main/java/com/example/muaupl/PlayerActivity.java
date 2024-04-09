@@ -172,7 +172,7 @@ public class PlayerActivity extends AppCompatActivity {
                 currentTrackIndex = 0;
 
                 if (trackUri != null) {
-                    Log.d("PlayerActivity", "trackUri value: " + trackUri);
+                    Log.d("PlayerActivity", "Значение trackUri: " + trackUri);
 
                     //код для проверки выполнения после получения trackUri
                     Log.d("PlayerActivity", "Полученный trackUri: " + trackUri);
@@ -313,10 +313,10 @@ public class PlayerActivity extends AppCompatActivity {
             if (nextTrack != null && nextTrack.getTrackUri() != null) {
                 playTrack(nextTrack);
             } else {
-                Log.e("PlayerActivity", "Invalid track or trackUri is null for the next track");
+                Log.e("PlayerActivity", "Неверный трек или trackUri для следующего трека имеет значение null.");
             }
         } else {
-            Log.d("PlayerActivity", "Empty tracks list");
+            Log.d("PlayerActivity", "Пустой список треков");
         }
     }
 
@@ -333,10 +333,10 @@ public class PlayerActivity extends AppCompatActivity {
             if (previousTrack != null && previousTrack.getTrackUri() != null) {
                 playTrack(previousTrack);
             } else {
-                Log.e("PlayerActivity", "Invalid track or trackUri is null for the previous track");
+                Log.e("PlayerActivity", "Неверный трек или trackUri имеет значение null для предыдущего трека.");
             }
         } else {
-            Log.d("PlayerActivity", "Empty tracks list");
+            Log.d("PlayerActivity", "Пустой список треков");
         }
     }
 
@@ -353,5 +353,4 @@ public class PlayerActivity extends AppCompatActivity {
             isPlaying = !isPlaying;
         }
     }
-
 }

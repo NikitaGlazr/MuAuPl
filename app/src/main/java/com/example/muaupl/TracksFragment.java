@@ -53,7 +53,6 @@ public class TracksFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Track selectedTrack = tracksList.get(position);
-
              //   Log.d("MyApp", "Selected track - Title: " + selectedTrack.getTitle() + ", Uri: " + getTrackUri(selectedTrack.getTitle()));
 
                 // Добавляем логику для проверки пустоты массива при клике на трек
@@ -87,10 +86,8 @@ public class TracksFragment extends Fragment {
                 }
             }
         });
-
         return view;
     }
-
 
     private String getTrackUri(String trackTitle) {
         Uri uri = MediaStore.Audio.Media.EXTERNAL_CONTENT_URI;
@@ -107,14 +104,13 @@ public class TracksFragment extends Fragment {
                 cursor.close();
                 return trackUri;
             } else {
-                Log.e("MyApp", "Failed to get column index for DATA");
+                Log.e("MyApp", "Не удалось получить индекс столбца для DATA.");
             }
         } else {
-            Log.e("MyApp", "Cursor is null or empty");
+            Log.e("MyApp", "Курсор имеет значение null или пуст");
         }
         return null;
     }
-
 
     private void retrieveTracks(boolean isMusicFragment) {
         tracksList.clear(); // Очистить список перед добавлением новых треков
@@ -147,7 +143,7 @@ public class TracksFragment extends Fragment {
                         tracksList.add(new Track(trackTitle, trackTime, trackUri));
                     //    Log.d("MyApp", "Added track - Title: " + trackTitle + ", Uri: " + trackUri);
                     } else {
-                        Log.e("MyApp", "trackUri is null for track: " + trackTitle);
+                        Log.e("MyApp", "trackUri имеет значение null для трека: " + trackTitle);
                     }
                 }
             }
@@ -168,7 +164,7 @@ public class TracksFragment extends Fragment {
     }
     public void showAllTracks() {
         tracksList.clear();
-        retrieveTracks(tabType == 0); // Передаnm параметр в зависимости от tabType
+        retrieveTracks(tabType == 0); // Передать параметр в зависимости от tabType
 
         if (tracksAdapter != null) {
             ((TrackAdapter) tracksAdapter).resetFilter();
